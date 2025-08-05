@@ -1,0 +1,7 @@
+2025-08-04T19:32:10.223Z - Error: Simulated error for testing
+Stack: Error: Simulated error for testing
+    at Server.<anonymous> (C:\Kurs IT\Hausaufgaben\node_js\dz_05\task2_server.js:9:11)
+    at Server.emit (node:events:518:28)
+    at parserOnIncoming (node:_http_server:1155:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+
