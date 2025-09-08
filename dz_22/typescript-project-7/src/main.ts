@@ -1,0 +1,26 @@
+import { capitalize, reverseString } from "./modules/stringUtils.js";
+import { Finance } from "./modules/finance.js";
+import { UserManagement } from "./modules/userManagement.js";
+import { generateFibonacci, generatePrimeNumbers } from "./modules/sequenceUtils.js";
+
+console.log('\nЗадание 1')
+console.log(capitalize("hello")); 
+console.log(reverseString("hello"));
+
+console.log('\nЗадание 2')
+const loanCalc = new Finance.LoanCalculator(150000, 7.5, 5);
+console.log(`Monthly Payment: ${loanCalc.calculateMonthlyPayment().toFixed(2)}`);
+const taxCalc = new Finance.TaxCalculator(85000, 22);
+console.log(`Tax Amount: ${taxCalc.calculateTax().toFixed(2)}`);
+
+console.log('\nЗадание 3')
+const admin = new UserManagement.Admin.AdminUser("Max", "max@example.com");
+console.log(`Is Super Admin: ${admin.isSuperAdmin}`);
+admin.promoteToSuperAdmin();
+console.log(`Is Super Admin after promotion: ${admin.isSuperAdmin}`);
+admin.revokeSuperAdmin();
+console.log(`Is Super Admin after revocation: ${admin.isSuperAdmin}`);
+
+console.log('\nЗадание 4')
+console.log('Fibonacci up to 50:', generateFibonacci(50));
+console.log('Prime numbers up to 50:', generatePrimeNumbers(50));
